@@ -1,0 +1,105 @@
+/* ==========================================================
+   style.css - Custom CSS (ngoài Tailwind utility classes)
+   ========================================================== */
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overscroll-behavior: none;
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+  main > div {
+    min-width: 0;
+  }
+  main > div > div {
+    width: 100%;
+    min-width: 0;
+  }
+  main section {
+    min-width: 0;
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+button[data-copy] {
+  min-width: 0;
+}
+button[data-copy] code {
+  min-width: 0;
+  overflow-wrap: normal;
+  white-space: nowrap;
+  font-size: 0.625rem;
+}
+@media (min-width: 640px) {
+  button[data-copy] code {
+    font-size: inherit;
+  }
+}
+button[data-copy] .material-symbols-outlined {
+  flex-shrink: 0;
+}
+.copy-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  z-index: 60;
+  transform: translate(-50%, 1rem);
+  max-width: calc(100vw - 2rem);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #00236f;
+  color: #fff;
+  font: 500 0.875rem "Be Vietnam Pro", sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.copy-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* FAQ Details styling */
+.faq-details summary::-webkit-details-marker {
+  display: none;
+}
+.faq-details[open] summary .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Checklist interaction */
+.checklist-item.is-checked {
+  background-color: rgba(220, 225, 255, 0.4);
+}
+.checklist-item.is-checked .checklist-title {
+  text-decoration: line-through;
+  color: #757682;
+}
+
+/* Filter Dimming / Transition */
+[data-course-category] {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+[data-course-category].is-dimmed {
+  opacity: 0.35;
+  filter: grayscale(0.5);
+  pointer-events: none;
+}
+[data-course-category].is-hidden {
+  display: none !important;
+}
