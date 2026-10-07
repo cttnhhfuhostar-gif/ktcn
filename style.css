@@ -28,10 +28,27 @@
     min-width: 0;
   }
 }
+/* Polished, accessible scrollbar */
 ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+.no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 .no-scrollbar {
+  -ms-overflow-style: none;
   scrollbar-width: none;
 }
 button[data-copy] {
@@ -103,3 +120,67 @@ button[data-copy] .material-symbols-outlined {
 [data-course-category].is-hidden {
   display: none !important;
 }
+
+/* Sticky First Column for Comparison Matrix on Desktop */
+@media (min-width: 768px) {
+  .matrix-sticky-col {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    background-color: #ffffff;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
+  }
+  thead .matrix-sticky-col {
+    background-color: #eaedff;
+    z-index: 20;
+  }
+}
+
+/* Search Jump Pulse Animation */
+@keyframes targetPulse {
+  0% {
+    outline: 3px solid #0051d5;
+    outline-offset: 4px;
+    background-color: rgba(0, 81, 213, 0.12);
+  }
+  50% {
+    outline: 3px solid #316bf3;
+    outline-offset: 8px;
+    background-color: rgba(49, 107, 243, 0.2);
+  }
+  100% {
+    outline: 2px solid transparent;
+    outline-offset: 0;
+    background-color: transparent;
+  }
+}
+
+.highlight-jump {
+  animation: targetPulse 2.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.75rem;
+}
+
+/* Keyboard Focus Accessibility (WCAG AA) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #0051d5 !important;
+  outline-offset: 2px !important;
+}
+
+/* Touch Targets: ensure comfortable hit area on mobile */
+@media (max-width: 768px) {
+  button,
+  .checklist-item,
+  a[role="button"] {
+    min-height: 44px;
+  }
+}
+
+/* Search dropdown scroll max-height */
+.search-results-box {
+  max-height: 380px;
+  overflow-y: auto;
+}
+

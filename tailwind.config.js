@@ -68,47 +68,108 @@ tailwind.config = {
         margin: "2rem",
       },
       fontFamily: {
-        "body-md": ["Be Vietnam Pro"],
-        "headline-md": ["Space Grotesk"],
-        "label-md": ["JetBrains Mono"],
-        "label-sm": ["JetBrains Mono"],
-        "body-lg": ["Be Vietnam Pro"],
-        "headline-xl": ["Space Grotesk"],
-        "headline-xl-mobile": ["Space Grotesk"],
-        "button-text": ["Be Vietnam Pro"],
-        "headline-sm": ["Space Grotesk"],
-        "headline-lg": ["Space Grotesk"],
-        "headline-lg-mobile": ["Space Grotesk"],
-        "body-sm": ["Be Vietnam Pro"],
+        "body-md": [
+          "Be Vietnam Pro",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "'Segoe UI'",
+          "Roboto",
+          "sans-serif",
+        ],
+        "headline-md": [
+          "Space Grotesk",
+          "'Be Vietnam Pro'",
+          "sans-serif",
+        ],
+        "label-md": [
+          "JetBrains Mono",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Consolas",
+          "monospace",
+        ],
+        "label-sm": [
+          "JetBrains Mono",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Consolas",
+          "monospace",
+        ],
+        "body-lg": [
+          "Be Vietnam Pro",
+          "system-ui",
+          "-apple-system",
+          "sans-serif",
+        ],
+        "headline-xl": [
+          "Space Grotesk",
+          "'Be Vietnam Pro'",
+          "sans-serif",
+        ],
+        "headline-xl-mobile": [
+          "Space Grotesk",
+          "'Be Vietnam Pro'",
+          "sans-serif",
+        ],
+        "button-text": [
+          "Be Vietnam Pro",
+          "system-ui",
+          "-apple-system",
+          "sans-serif",
+        ],
+        "headline-sm": [
+          "Space Grotesk",
+          "'Be Vietnam Pro'",
+          "sans-serif",
+        ],
+        "headline-lg": [
+          "Space Grotesk",
+          "'Be Vietnam Pro'",
+          "sans-serif",
+        ],
+        "headline-lg-mobile": [
+          "Space Grotesk",
+          "'Be Vietnam Pro'",
+          "sans-serif",
+        ],
+        "body-sm": [
+          "Be Vietnam Pro",
+          "system-ui",
+          "-apple-system",
+          "sans-serif",
+        ],
       },
       fontSize: {
         "body-md": [
-          "0.875rem",
-          { lineHeight: "1.5rem", fontWeight: "400" },
+          "1rem", // 16px - Đạt chuẩn WCAG & UX theo yêu cầu
+          { lineHeight: "1.65rem", fontWeight: "400" },
         ],
         "headline-md": [
           "1.25rem",
           { lineHeight: "1.75rem", fontWeight: "600" },
         ],
         "label-md": [
-          "0.8125rem",
+          "0.875rem", // 14px
           {
             lineHeight: "1.25rem",
-            letterSpacing: "0.02em",
+            letterSpacing: "0.01em",
             fontWeight: "500",
           },
         ],
         "label-sm": [
-          "0.6875rem",
+          "0.78125rem", // 12.5px
           {
-            lineHeight: "1rem",
-            letterSpacing: "0.04em",
+            lineHeight: "1.125rem",
+            letterSpacing: "0.015em",
             fontWeight: "500",
           },
         ],
         "body-lg": [
-          "1rem",
-          { lineHeight: "1.625rem", fontWeight: "400" },
+          "1.125rem", // 18px
+          { lineHeight: "1.75rem", fontWeight: "400" },
         ],
         "headline-xl": [
           "2.25rem",
@@ -127,8 +188,8 @@ tailwind.config = {
           },
         ],
         "button-text": [
-          "0.875rem",
-          { lineHeight: "1.25rem", fontWeight: "600" },
+          "0.9375rem", // 15px
+          { lineHeight: "1.375rem", fontWeight: "600" },
         ],
         "headline-sm": [
           "1.125rem",
@@ -151,8 +212,8 @@ tailwind.config = {
           },
         ],
         "body-sm": [
-          "0.75rem",
-          { lineHeight: "1.25rem", fontWeight: "400" },
+          "0.875rem", // 14px thay vì 12px để không bị quá nhỏ
+          { lineHeight: "1.45rem", fontWeight: "400" },
         ],
       },
     },
